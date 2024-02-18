@@ -1,3 +1,4 @@
+#Import Lib
 from flask import Flask, render_template, request
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -5,6 +6,7 @@ from io import BytesIO
 import base64
 import redis
 
+#Connect Flask + Redis
 app = Flask(__name__)
 redis_client = redis.Redis(host='redis', port=6379)
 
